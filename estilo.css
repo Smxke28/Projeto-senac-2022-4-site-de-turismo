@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    color: #e6e6e6;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Logo */
+.cabecalho img {
+    width: 140px;
+    margin: 25px auto 90px auto;
+    display: block;
+    filter: drop-shadow(0 0 8px #00aaff55);
+    transition: transform 0.4s;
+}
+.cabecalho img:hover {
+    transform: scale(1.05);
+}
+
+/* MENU */
+.menu {
+    width: 100%;
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(6px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border-bottom: 1px solid #222;
+    box-shadow: 0 2px 8px #0006;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    padding: 12px 0;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+}
+
+.menu ul li a {
+    color: #dcdcdc;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 10px 18px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.menu ul li a:hover {
+    background: #1e1e1e;
+    color: #00aaff;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 10px #00aaff55;
+}
+
+/* Ícones do menu */
+.menu img {
+    width: 22px;
+    margin-right: 8px;
+}
+
+/* CONTEÚDO */
+.conteudo {
+    width: 80%;
+    margin: 40px auto;
+    padding-top: 90px; /* espaço por causa do menu fixo */
+    font-size: 1.1em;
+    text-align: justify;
+    line-height: 1.7;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Cards */
+.Caminhada {
+    background: rgba(25, 25, 25, 0.9);
+    border: 1px solid #2a2a2a;
+    padding: 18px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px #0005;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.Caminhada:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 6px 16px #0007;
+}
+.Caminhada img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+/* detalhes/summary */
+details summary {
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: #00aaff;
+    transition: color 0.3s;
+}
+details summary:hover {
+    color: #0088cc;
+}
+details p {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+/* VÍDEO */
+.conteudo iframe {
+    width: 100%;
+    max-width: 850px;
+    height: 480px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 14px;
+    border: none;
+    box-shadow: 0 0 12px #0007;
+}
+
+/* FORMULÁRIO */
+fieldset {
+    background: rgba(30, 30, 30, 0.9);
+    border: 1px solid #333;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px #0005;
+}
+legend {
+    background: linear-gradient(135deg, #00aaff, #0088cc);
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: black;
+}
+label {
+    color: #e6e6e6;
+    font-weight: 500;
+}
+input, select {
+    background: #1b1b1b;
+    border: 1px solid #333;
+    color: #eee;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 6px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+input:focus, select:focus {
+    border-color: #00aaff;
+    box-shadow: 0 0 8px #00aaff55;
+    outline: none;
+}
+
+/* Botões */
+button {
+    background: linear-gradient(135deg, #00aaff, #0088cc);
+    color: #000;
+    border: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 12px;
+    transition: transform 0.3s, background 0.3s;
+}
+button:hover {
+    background: linear-gradient(135deg, #0088cc, #006699);
+    transform: scale(1.05);
+}
+
+/* TÍTULOS */
+h1, h2 {
+    color: #00aaff;
+    text-align: center;
+    text-shadow: 0 0 8px #00aaff55;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .conteudo {
+        width: 92%;
+        padding-top: 110px;
+    }
+    .conteudo iframe {
+        height: 300px;
+    }
+}
